@@ -26,7 +26,7 @@ rel="stylesheet">
     --violet: #6b3fa0;
     --violet-deep: #4e2a8e;
     --rule: #d8c9ef;
-    --maxw: 720px;
+    --maxw: 920px;
     --edge: 28px;
   }
 
@@ -139,9 +139,9 @@ rel="stylesheet">
     line-height: 1.05;
     font-weight: 700;
     letter-spacing: -0.01em;
+    text-transform: uppercase;
     margin: 0 0 28px;
     color: var(--paper);
-    max-width: 11ch;
   }
 
   .bio{
@@ -277,13 +277,13 @@ rel="stylesheet">
 <h1><span data-i18n="es">Ingeniero de software.</span>
 <span data-i18n="en">Software engineer.</span></h1>
 <p class="bio" data-i18n="es">Ingeniero de software senior en
-BlueCode, especializado en Elixir/Phoenix, con base en Córdoba,
+TINIXTECH, especializado en Elixir/Phoenix, con base en Córdoba,
 Argentina. Backend polyglota, con foco en sistemas distribuidos,
-infraestructura Linux e IoT.</p>
-<p class="bio" data-i18n="en">Senior software engineer at BlueCode,
-focused on Elixir/Phoenix, based in Córdoba, Argentina. Polyglot
-backend engineer, focused on distributed systems, Linux
-infrastructure, and IoT.</p>
+Linux - FreeBSD, infraestructura, e IoT.</p>
+<p class="bio" data-i18n="en">Senior software engineer at
+TINIXTECH, focused on Elixir/Phoenix, based in Córdoba, Argentina.
+Polyglot backend engineer, focused on distributed systems, Linux -
+FreeBSD, infrastructure, and IoT.</p>
 </header>
 <section aria-labelledby="stack-h">
 <div class="section-head"><span class="section-num">01</span>
@@ -370,12 +370,21 @@ through a project.</p>
 "https://www.instagram.com/george.daniel.tinix/">Instagram</a></li>
 </ul>
 </section>
-<footer><span data-i18n="es">© 2026 Daniel Tinivella — Todos los
-derechos reservados.</span> <span data-i18n="en">© 2026 Daniel
-Tinivella — All rights reserved.</span> · <a href=
+<footer><span data-i18n="es">© <span id="year-es"></span> Daniel
+Tinivella — Todos los derechos reservados.</span> <span data-i18n=
+"en">© <span id="year-en"></span> Daniel Tinivella — All rights
+reserved.</span> · <a href=
 "https://opensource.org/licenses/MIT">MIT License</a></footer>
 </div>
 <script>
+(function(){
+  var y = new Date().getFullYear();
+  var yEs = document.getElementById('year-es');
+  var yEn = document.getElementById('year-en');
+  if (yEs) yEs.textContent = y;
+  if (yEn) yEn.textContent = y;
+})();
+
 (function(){
   var root = document.documentElement;
   var btn = document.getElementById('langSwitch');
